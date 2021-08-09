@@ -1,0 +1,328 @@
+/* Start header */
+.main-header {
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+  position: relative;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .menu {
+      .btn-menu {
+        cursor: pointer;
+        transition: all 0.2s;
+        &.opened {
+          opacity: 0.6;
+        }
+
+        span {
+          display: block;
+          width: 2.3rem;
+          height: 3px;
+          background-color: $white;
+          position: relative;
+
+          &:nth-child(2) {
+            margin: 0.5rem auto;
+          }
+        }
+      }
+
+      .menu-list {
+        opacity: 0;
+        background-color: $white;
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+        padding: {
+          top: 2rem;
+          bottom: 2rem;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: -12%;
+          right: 0;
+          border-width: 3rem 2.5rem 0rem;
+          border-color: transparent $white transparent transparent;
+          border-style: solid;
+        }
+
+        &.show {
+          opacity: 1;
+        }
+
+        .menu-item {
+          margin-bottom: 0.5rem;
+          padding: 1.2rem 2.5rem;
+          border-radius: 2rem;
+          transition: all 0.2s;
+          cursor: pointer;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          &.active {
+            font-family: $fraunces-font-family;
+            background-color: $yellow !important;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            a {
+              color: black !important;
+            }
+          }
+
+          &:hover {
+            font-family: $fraunces-font-family;
+            background-color: #9bd8f7d3;
+            font-weight: 700;
+            text-transform: uppercase;
+
+            a {
+              color: $white;
+            }
+          }
+
+          a {
+            font-size: 1.2rem;
+            color: $very-dark-grayish-blue;
+          }
+        }
+      }
+    }
+  }
+
+  .intro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("/images/mobile/image-header.jpg") no-repeat scroll center
+      70% / cover transparent;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      width: 80%;
+      margin: auto;
+      color: $white;
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: 9px;
+      padding-bottom: 9rem;
+      position: relative;
+
+      &::after {
+        content: url("/images/icon-arrow-down.svg");
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
+
+// Start services
+.services {
+  .services-box,
+  .services-box {
+    width: 100%;
+    height: auto;
+
+    h2 {
+      margin-bottom: 1.6rem;
+      font: {
+        size: 2.2rem;
+        weight: 900;
+      }
+    }
+  }
+
+  .services-box:nth-child(2),
+  .services-box:nth-child(4) {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: $very-dark-desaturated-blue;
+    background-color: $sections-bg;
+
+    p {
+      font-size: 1.1rem;
+      color: $very-dark-grayish-blue;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    @include learnMore($yellow);
+  }
+  .services-box:nth-child(4) {
+    @include learnMore($soft-red);
+  }
+  .services-box:nth-child(5),
+  .services-box:nth-child(6) {
+    color: $dark-desaturated-cyan-graphic-design-text;
+    position: relative;
+    .description {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 10%;
+      text-align: center;
+
+      p {
+        font-size: 1rem;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .services-box:nth-child(6) {
+    color: $dark-blue-photography-text;
+  }
+}
+
+// Start testimonials
+.testimonials {
+  background-color: $sections-bg;
+  padding: 3rem 1.5rem;
+  text-align: center;
+
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: $grayish-blue;
+    font: {
+      size: 1.3rem;
+      weight: 700;
+    }
+  }
+
+  .testimonials-list {
+    margin-top: 1rem;
+  }
+
+  .testimonials-item {
+    padding: 2rem 0;
+    .img {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 2rem auto;
+    }
+
+    p {
+      width: 90%;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: auto;
+      color: $very-dark-grayish-blue;
+    }
+
+    .testi-footer {
+      margin-top: 2rem;
+
+      span {
+        display: block;
+        margin-bottom: 0.5rem;
+
+        &.name {
+          color: $very-dark-desaturated-blue;
+          font-weight: 900;
+          font: {
+            family: $fraunces-font-family;
+            size: 1.2rem;
+            weight: 900;
+          }
+        }
+
+        &.title {
+          color: $grayish-blue;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+// Start Projects
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+
+  .project-item {
+    flex: 1 0 50%;
+  }
+}
+
+// start footer
+footer {
+  background-color: $dark-moderate-cyan-footer;
+  text-align: center;
+  padding: 10% 15%;
+  .logo {
+    display: inline-block;
+    margin: 2.5rem auto;
+    img {
+      filter: brightness(0.2) sepia(1) hue-rotate(466deg) saturate(5);
+    }
+  }
+
+  .menu,
+  .socialmedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    a {
+      color: lighten($dark-desaturated-cyan-graphic-design-text, 10%);
+    }
+  }
+
+  .socialmedia {
+    width: 70%;
+    margin: 4.5rem auto;
+
+    a {
+      color: $dark-desaturated-cyan-graphic-design-text;
+    }
+  }
+
+  li:hover a {
+    color: $white;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

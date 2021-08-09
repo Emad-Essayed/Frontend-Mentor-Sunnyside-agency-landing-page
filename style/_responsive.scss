@@ -1,0 +1,174 @@
+// To Medium Screens
+// @include MaxMeduim {
+//   .mobile {
+//     display: block;
+//   }
+
+//   .desktop {
+//     display: none;
+//   }
+// }
+
+// From Meduim screens
+@include minSmall {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@include minMeduim {
+  .container {
+    max-width: 720px;
+  }
+
+  p {
+    width: 70% !important;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+}
+
+// From large screens
+@include minLarge {
+  .container {
+    max-width: 960px;
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+
+  // Start header
+  .main-header {
+    nav {
+      gap: 10%;
+      .logo {
+        flex: 1 0 20%;
+      }
+      .menu {
+        flex: 1 0 70%;
+
+        .btn-menu {
+          display: none !important;
+        }
+
+        .menu-list {
+          opacity: 1;
+          background-color: transparent;
+          position: static;
+          flex-direction: row;
+          justify-content: flex-end;
+          gap: 3%;
+          padding: 0;
+
+          &::before {
+            display: none;
+          }
+
+          .menu-item {
+            margin-bottom: 0;
+            padding: 0 0.8rem;
+            line-height: 2rem;
+
+            &.active {
+              background-color: $white !important;
+            }
+
+            a {
+              color: $white;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .intro {
+      background-image: url("/images/desktop/image-header.jpg");
+
+      h1 {
+        width: auto;
+        font-size: 4rem;
+        padding-bottom: 15rem;
+
+        &::after {
+          bottom: 17%;
+        }
+      }
+    }
+  }
+
+  // Start Services
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .services-box {
+      flex: 1 0 50%;
+      text-align: left !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      &:nth-child(2) {
+        order: -1;
+      }
+
+      h2 {
+        width: 85%;
+        margin-top: 2rem;
+        font-size: 2rem;
+        margin: {
+          right: auto;
+          left: auto;
+        }
+      }
+
+      p {
+        width: 85% !important;
+        //   font-size: 0.8rem;
+        //   margin: {
+        //     right: auto;
+        //     left: auto;
+        //   }
+      }
+
+      .learn-more {
+        margin-left: 6%;
+      }
+
+      a {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+
+  // Start testimonials
+  .testimonials .testimonials-list {
+    display: flex;
+
+    .testimonials-item p {
+      width: 90% !important;
+    }
+  }
+
+  // Start footer
+  footer {
+    padding: 4% 35%;
+  }
+}
+
+// From X-Large screens
+@include minXLarge {
+  .container {
+    max-width: 1140px;
+  }
+}
