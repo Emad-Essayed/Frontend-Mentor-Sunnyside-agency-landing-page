@@ -1,21 +1,11 @@
-// To Medium Screens
-// @include MaxMeduim {
-//   .mobile {
-//     display: block;
-//   }
-
-//   .desktop {
-//     display: none;
-//   }
-// }
-
-// From Meduim screens
+/* From Small screens */
 @include minSmall {
   .container {
     max-width: 540px;
   }
 }
 
+/* From Meduim screens */
 @include minMeduim {
   .container {
     max-width: 720px;
@@ -30,7 +20,7 @@
   }
 }
 
-// From large screens
+/* From large screens */
 @include minLarge {
   .container {
     max-width: 960px;
@@ -90,7 +80,7 @@
     }
 
     .intro {
-      background-image: url("/images/desktop/image-header.jpg");
+      background-image: url("../images/desktop/image-header.jpg");
 
       h1 {
         width: auto;
@@ -166,7 +156,7 @@
   }
 }
 
-// From X-Large screens
+/* From X-Large screens */
 @include minXLarge {
   .container {
     max-width: 1140px;

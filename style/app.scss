@@ -110,7 +110,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url("/images/mobile/image-header.jpg") no-repeat scroll center
+    background: url("../images/mobile/image-header.jpg") no-repeat scroll center
       70% / cover transparent;
     z-index: -1;
     display: flex;
@@ -130,7 +130,7 @@
       position: relative;
 
       &::after {
-        content: url("/images/icon-arrow-down.svg");
+        content: url("../images/icon-arrow-down.svg");
         position: absolute;
         bottom: -10%;
         left: 50%;
@@ -140,7 +140,7 @@
   }
 }
 
-// Start services
+/* Start services */
 .services {
   .services-box,
   .services-box {
@@ -205,7 +205,7 @@
   }
 }
 
-// Start testimonials
+/* Start testimonials */
 .testimonials {
   background-color: $sections-bg;
   padding: 3rem 1.5rem;
@@ -269,7 +269,7 @@
   }
 }
 
-// Start Projects
+/* Start Projects */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -279,7 +279,7 @@
   }
 }
 
-// start footer
+/* start footer */
 footer {
   background-color: $dark-moderate-cyan-footer;
   text-align: center;
@@ -317,12 +317,12 @@ footer {
   li:hover a {
     color: $white;
   }
-}
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
 }
