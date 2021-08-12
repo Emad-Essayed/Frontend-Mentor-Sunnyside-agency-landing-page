@@ -34,7 +34,7 @@
     display: block;
   }
 
-  // Start header
+  /* Start header */
   .main-header {
     nav {
       gap: 10%;
@@ -94,7 +94,7 @@
     }
   }
 
-  // Start Services
+  /* Start Services */
   .services {
     display: flex;
     flex-wrap: wrap;
@@ -141,12 +141,21 @@
     }
   }
 
-  // Start testimonials
+  /* Start testimonials */
   .testimonials .testimonials-list {
     display: flex;
 
     .testimonials-item p {
       width: 90% !important;
+    }
+  }
+
+  /* Start Projects */
+  .projects {
+    flex-wrap: nowrap;
+
+    .project-item {
+      flex: 1 0 25%;
     }
   }
 

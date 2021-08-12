@@ -531,6 +531,7 @@ footer .attribution a {
   .desktop {
     display: block;
   }
+  /* Start header */
   .main-header nav {
     gap: 10%;
   }
@@ -587,6 +588,7 @@ footer .attribution a {
   .main-header .intro h1::after {
     bottom: 17%;
   }
+  /* Start Services */
   .services {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -638,6 +640,7 @@ footer .attribution a {
   .services .services-box a {
     font-size: 0.9rem !important;
   }
+  /* Start testimonials */
   .testimonials .testimonials-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -645,6 +648,16 @@ footer .attribution a {
   }
   .testimonials .testimonials-list .testimonials-item p {
     width: 90% !important;
+  }
+  /* Start Projects */
+  .projects {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .projects .project-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 25%;
+            flex: 1 0 25%;
   }
   footer {
     padding: 4% 35%;
